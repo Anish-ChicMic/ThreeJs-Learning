@@ -36,15 +36,15 @@ const scene = new THREE.Scene()
 
 // Object
 const geometry = new THREE.BufferGeometry();
-const positionsArray = new Float32Array(5000 * 3 * 3);
-for (let i = 0; i < 5000 * 3 * 3; i++) {
+const positionsArray = new Float32Array(500 * 3 * 3);
+for (let i = 0; i < 500 * 3 * 3; i++) {
     // positionsArray[i] = Math.random();
     positionsArray[i] = (Math.random() - 0.5) * 4;
 }
 const positionsAttribut = new THREE.BufferAttribute(positionsArray, 3);
 geometry.setAttribute('position', positionsAttribut);
 const material = new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true });
-const mesh = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1, 100, 100, 200), material);
+const mesh = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1, 10, 10, 10), material);
 scene.add(mesh)
 
 // Debug
